@@ -1,8 +1,8 @@
 public class Ebook extends Book {
     private String fileName;
 
-    public Ebook(String title, String author, String fileName) {
-        super(title, author);
+    public Ebook(String title, String author, Publisher publisher, String fileName, int year, Writer writer) {
+        super(title, author, publisher, year, writer);
         this.fileName = fileName;
     }
 
@@ -15,18 +15,14 @@ public class Ebook extends Book {
     }
 
     public void display() {
-        System.out.println("Title: " + this.getTitle());
-        System.out.println("Author: " + this.getAuthor());
-        System.out.println("Filename: " + this.fileName);
-
+        System.out.println("Title: " + getTitle());
+        System.out.println("Author: " + getAuthor());
+        System.out.println("Publisher: " + getPublisher().getName());
+        System.out.println("Filename: " + getFileName());
+        System.out.println("Year: " + getYear());
     }
 
     public static void main(String[] args) {
-        Ebook ebook1 = new Ebook("Yellowface", "Rebecca F. Kuang", "yellowface.mobi");
-        Ebook ebook2 = new Ebook("The Witcher", "Andrzej Sapkowski", "thewitcher.mobi");
-
-        ebook1.display();
-        ebook2.display();
     }
 
 }

@@ -1,5 +1,3 @@
-import java.nio.file.attribute.AclEntry;
-
 public class Computer {
     private int storage;
     private String brand;
